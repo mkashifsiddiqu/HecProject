@@ -37,9 +37,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         router.pathname !== `/Focalperson` &&
         router.pathname !== `/Admin` ? (
         <ThemeProvider theme={theme}>
-          <Header />
+           <Header />
           <SideBar />
-          <CssBaseline />
           <Box sx={{ m: { lg: `6em 2em 0 6em`, md: `6em 2em 0 0em` } }}>
             <NextNProgress height={2} />
             <Component {...pageProps} />

@@ -31,7 +31,7 @@ export default function TemporaryDrawer() {
     const router = useRouter();
   return (
     <div>
-      <Box sx={{zIndex:`15000`,m:4}}>
+      <Box sx={{zIndex:`1500000`,m:4}}>
       {([`right`] as const).map((anchor) => (
         <React.Fragment key={anchor}>
           <Box sx={{transform:`rotate(270deg)`, position:`fixed`,right:`-60px`,top:`35%`}}>
@@ -60,10 +60,11 @@ export default function TemporaryDrawer() {
           </Box>
         </React.Fragment>
       ))}
-      <Box sx={{position:`fixed`,right:`60px`,bottom:`8%`}}>
+      <Box sx={{position:`fixed`,right:`60px`,bottom:`13%`}}>
          <Button
           variant={`contained`} 
           sx={{
+          borderRadius:`8px`,height:`50px`,  
           bgcolor:`#048753`,'&:hover':{bgcolor:`#048753`},
           '&::after':{
           content: `" "`,
