@@ -1,16 +1,14 @@
-import { Alert, Box, Button, Divider, Grid, Hidden, IconButton, Paper, TextField, Tooltip, Typography } from '@mui/material'
+/* eslint-disable prettier/prettier */
+import { Box, Button, Divider, Paper, Typography } from '@mui/material'
 import React from 'react'
-import EditIcon from '@mui/icons-material/Edit';
 import { createTheme, ThemeProvider } from '@mui/material'
-import { motion } from 'framer-motion';
-import ReportIcon from '@mui/icons-material/Report';
 import EducationStepper from './EducationStepper';
 import Qualificationdetail from '../../Degree Attestation/DetailofDegreeCompoent/Qualificationdetail';
 import Degree from '../../Degree Attestation/DetailofDegreeCompoent/Degree';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 const theme = createTheme({
   typography: {
-    fontFamily: "montserrat",
+    fontFamily: `montserrat`,
     fontSize: 12
   },
 });
@@ -26,10 +24,10 @@ const EducationDetail = () => {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Paper sx={{ margin: "0 0 20px 0" }}>
-          <Box padding={"20px"}>
-            <Box marginBottom={"25px"} >
-              <Box paddingBottom={"10px"} display={"flex"} alignItems={"flex-end"}>
+        <Paper sx={{ margin: `0 0 20px 0` }}>
+          <Box padding={`20px`}>
+            <Box marginBottom={`25px`} >
+              <Box paddingBottom={`10px`} display={`flex`} alignItems={`flex-end`}>
                 <Typography color="#48465b" fontSize={15.6} fontWeight={700} marginRight="10px">Education Details</Typography>
               </Box>
               <Divider></Divider>
@@ -41,13 +39,13 @@ const EducationDetail = () => {
               startIcon={<AddCircleIcon/>}
               sx={{
                 ml: 4,
-                backgroundColor: "#018651",
-                color: "#fff",
-                fontFamily: "montserrat",
-                padding: "0.6250em 1.875em",
+                backgroundColor: `#018651`,
+                color: `#fff`,
+                fontFamily: `montserrat`,
+                padding: `0.6250em 1.875em`,
                 '&:hover': {
-                  backgroundColor: "white",
-                  color: "#8A8A8A",
+                  backgroundColor: `white`,
+                  color: `#8A8A8A`,
 
                 },
               }}>Add Detail of Degree
@@ -62,19 +60,19 @@ const EducationDetail = () => {
             </Box>
           </Box>
         </Paper>
-        <Box sx={{display:'flex',justifyContent:'flex-end'}}>
+        <Box sx={{display:`flex`,justifyContent:`flex-end`}}>
         <Button
               onClick={closeClick}
               variant='contained'
               sx={{
                 ml: 4,
-                backgroundColor: "#018651",
-                color: "#fff",
-                fontFamily: "montserrat",
-                padding: "0.6250em 1.875em",
+                backgroundColor: `#018651`,
+                color: `#fff`,
+                fontFamily: `montserrat`,
+                padding: `0.6250em 1.875em`,
                 '&:hover': {
-                  backgroundColor: "white",
-                  color: "#8A8A8A",
+                  backgroundColor: `white`,
+                  color: `#8A8A8A`,
                 },
               }}>Appy for degree attestation
             </Button>
