@@ -33,7 +33,6 @@ export default function BasicMenu() {
               color="#636177">
                 Greetings, Student
                 <Avatar sx={{ marginLeft: `0.55rem`,backgroundImage:`url(${picture.src})`,backgroundSize:`100% 100%`,backgroundRepeat:`no-repeat`}}>
-                  A
                 </Avatar>
         </Typography>
       </Button>

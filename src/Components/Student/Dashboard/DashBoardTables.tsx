@@ -15,6 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import SearchIcon from '@mui/icons-material/Search';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import {
   Card,
@@ -28,7 +29,7 @@ import {
 import Image from 'next/image';
 import edit from '../../../../public/gedit.svg';
 import download from '../../../../public/gdownload.svg';
-
+import CachedIcon from '@mui/icons-material/Cached';
 function TablePaginationActions(props: {
   count: any;
   page: any;
@@ -167,6 +168,7 @@ export default function CustomPaginationActionsTable() {
     setCardsPerPage(parseInt(event.target.value, 10));
   };
 
+  const newLocal = '1rem';
   return (
     <Box margin={`1em`}>
       <TableContainer component={Paper}>
@@ -177,24 +179,30 @@ export default function CustomPaginationActionsTable() {
                 fontFamily={`montserrat`}
                 fontSize={`1rem`}
                 color={`#0000008a`}
-                fontWeight={600}
+                fontWeight={700}
               >
                 MY APPLICATIONS
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box sx={{ display: `flex`, flexDirection: `row-reverse` }}>
+              <Box sx={{ display: `flex`,alignItems:`center`}}>
+                <Box sx={{ display: `flex`,width:`160px`,alignItems:`center`,mr:2,'&:hover':{transform:`scale(1.05)`} }}>
+                  <CachedIcon sx={{width:`25px`,height:`25px`,
+                        bgcolor:`#369F75`,color:`white`,borderRadius:`50%`,mr:1,'&:hover':{transform:`rotate(45deg)`},cursor:`pointer`}}/>
+                  <Typography fontSize={`12px`} fontWeight={`500`}>Refresh Session</Typography>
+                </Box>
                 <TextField
-                  sx={{
-                    fontFamily: `montserrat`,
-                    fontSize: `0.80rem`,
-                    color: `#000`,
-                    fontWeight: `500`,
-                  }}
+                  placeholder='Application id, Application Status'
+                  InputLabelProps={{style: {fontSize: 14}}}
+                  sx={{'& input::placeholder':{fontSize:`10px`,color:`black`}}}
+                  InputProps={{
+                    style: {fontSize: 14,fontFamily: `montserrat`},
+                    endAdornment:(<SearchIcon fontSize='small'/>)}}
+                  color='success'
                   label="Filter"
                   variant="standard"
                   size="small"
-                ></TextField>
+                />
               </Box>
             </Grid>
           </Grid>
