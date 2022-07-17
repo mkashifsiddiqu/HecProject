@@ -10,9 +10,12 @@ import {
   faListAlt,
   faAlignCenter,
   faBook,
+  IconDefinition,
+  IconLookup,
 } from '@fortawesome/free-solid-svg-icons'
 import QuickPanel from './QuickPanel';
-import { MenuItem, MenuList,Hidden, Box } from '@mui/material';
+import { Hidden, Box } from '@mui/material';
+import { Icon, IconProp } from '@fortawesome/fontawesome-svg-core';
 const SideBar = () => {
   return (
     <>
@@ -24,7 +27,7 @@ const SideBar = () => {
          <li className={styles.li}>
             <Link href="/Dashboard">
               <a className={styles.a} href="#">
-                <FontAwesomeIcon className="fa-lg" icon={faHome} />
+                <FontAwesomeIcon className="fa-lg" icon={faHome as IconProp} />
                 <span className={styles.nav_text}>Home</span>
               </a>
             </Link>
@@ -34,7 +37,7 @@ const SideBar = () => {
             <Link href="/DegreeAttestation">
               <a className={styles.a} href="#">
                 {/* <i className="fa bi bi-book-fill fa-lg"></i> */}
-                <FontAwesomeIcon className="fa-lg" icon={faBookOpen} />
+                <FontAwesomeIcon className="fa-lg" icon={faBookOpen as IconProp}  />
                 <span className={styles.nav_text}>Degree Attestation</span>
               </a>
             </Link>
@@ -43,7 +46,7 @@ const SideBar = () => {
           <li className={styles.li}>
             <Link href="/TrackApplicationTables">
               <a className={styles.a} href="#">
-                <FontAwesomeIcon className="fa-lg" icon={faListAlt} />
+                <FontAwesomeIcon className="fa-lg" icon={faListAlt as IconProp} />
                 <span className={styles.nav_text}>Track Application</span>
               </a>
             </Link>
@@ -52,7 +55,7 @@ const SideBar = () => {
           <li className={styles.li}>
             <Link href="/DegreeAttestation">
               <a className={styles.a} href="#">
-                <FontAwesomeIcon className="fa-lg" icon={faAlignCenter} />
+                <FontAwesomeIcon className="fa-lg" icon={faAlignCenter as IconProp} />
                 <span className={styles.nav_text}>Equilance Serivce</span>
               </a>
             </Link>
@@ -60,7 +63,7 @@ const SideBar = () => {
           <li className={styles.li}>
             <Link href="/Ecourses">
               <a className={styles.a} href="#">
-                <FontAwesomeIcon className="fa-lg" icon={faBook} />
+                <FontAwesomeIcon className="fa-lg" icon={faBook as IconProp} />
                 <span className={styles.nav_text}>E-course</span>
               </a>
             </Link>

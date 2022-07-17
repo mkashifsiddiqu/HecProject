@@ -24,39 +24,36 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import PhotoSizeSelectActualIcon from '@mui/icons-material/PhotoSizeSelectActual';
-const Input = styled(`input`)({
-  display: `none`,
-});
-const degreeType = [`Regular`, `Afternoon`, `Distance learning`, `Private`];
-const imgList = [`template_2018`, `template_2010`];
+// const Input = styled(`input`)({
+//   display: `none`,
+// });
+// const degreeType = [`Regular`, `Afternoon`, `Distance learning`, `Private`];
+// const imgList = [`template_2018`, `template_2010`];
 const FpDegreetemplate = () => {
-  const [value, setValue] = React.useState<Date | null>(new Date(``));
-  const [img, setImg] = React.useState<string | null>(`no file Choose`);
-  const handleChange = (newValue: Date | null) => {
-    setValue(newValue);
-  };
-  const [personName, setPersonName] = React.useState<string[]>([]);
-  const handleChangeType = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const { options } = event.target;
-    const value: string[] = [];
-    for (let i = 0, l = options.length; i < l; i += 1) {
-      if (options[i].selected) {
-        value.push(options[i].value);
-      }
-    }
-    setImg(value);
-    setPersonName(value);
-  };
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  // const [value, setValue] = React.useState<Date | null>(new Date(``));
+  // const [img, setImg] = React.useState<string | null>(`no file Choose`);
+  // const handleChange = (newValue: Date | null) => {
+  //   setValue(newValue);
+  // };
+  // const [personName, setPersonName] = React.useState([]);
+  // const handleChangeType = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   const { options } = event.target;
+  //   const value = [];
+  //   for (let i = 0, l = options.length; i < l; i += 1) {
+  //     if (options[i].selected) {
+  //       value.push(options[i].value);
+  //     }
+  //   }
+  //   setImg(value);
+  //   setPersonName(value);
+  // };
+  // const [open, setOpen] = React.useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
   return (
     <div>
-      <Box margin={`10px 0`}>
-        {/* <Accordion>
-          <AccordionSummary>Degree Template</AccordionSummary>
-          <AccordionDetails> */}
-            <TableContainer>
+      {/* <Box margin={`10px 0`}>
+       <TableContainer>
               <Table>
                 <TableHead>
                   <TableRow>
@@ -277,9 +274,8 @@ const FpDegreetemplate = () => {
                 </TableBody>
               </Table>
             </TableContainer>
-          {/* </AccordionDetails>
-        </Accordion> */}
-      </Box>
+       
+      </Box> */}
     </div>
   );
 };

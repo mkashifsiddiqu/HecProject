@@ -21,7 +21,9 @@ padding:15px 0;
 width:300px;
 overflow:hidden;
 opacity:1;
+transition-duration: .15s;
 }
+
 .main_menu {
 background:white;
 position:fixed;
